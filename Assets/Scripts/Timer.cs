@@ -29,10 +29,11 @@ public class Timer : MonoBehaviour
     }
     private IEnumerator TimerCourotine(int duration)
     {
-        for (int i = 0; i < duration; i++)
+        for (int i = 0; i < duration +1; i++)
         {
             SoundManager.instance.Play(secondsData[i].soundName);
             timerImage.sprite = secondsData[i].image;
+            timerImage.SetNativeSize();
             timerAnimator.Play(timerAnimationName, 0, 0f);
             yield return new WaitForSeconds(1f);
         }

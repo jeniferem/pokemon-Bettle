@@ -8,10 +8,16 @@ public class Fighter : MonoBehaviour
     private CharacterData characterData;
     [SerializeField]
     private UnityEvent onInitialize;
+    private Animator animator;
+    public Animator Animator => animator;
+    private Health health;
+    public Health Health => health;
     private List <Attack> attacks;
     private Attack[] Attacks => attacks.ToArray();
     private void Awake()
     {
+        health = GetComponent<Health>();
+        animator = GetComponent<Animator>();
         attacks = new List<Attack>();
         foreach (AttackData attackData in characterData.attacks)
         {

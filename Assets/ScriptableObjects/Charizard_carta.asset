@@ -19,11 +19,13 @@ MonoBehaviour:
     minDamage: 50
     maxDamage: 200
     animationName: Attack
-    attackParticles: {fileID: 1590415177872986601, guid: acdb90624a404aa438447006f1026065, type: 3}
-    attackHitParticles: {fileID: 0}
+    attackDuration: 2
+    attackParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
+    attackHitParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   - attackName: Atackk2
     minDamage: 50
     maxDamage: 200
     animationName: Attack2
-    attackParticles: {fileID: 1652143759095011289, guid: e2c1ac940434a5242b54d72b66654687, type: 3}
-    attackHitParticles: {fileID: 0}
+    attackDuration: 2
+    attackParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
+    attackHitParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
