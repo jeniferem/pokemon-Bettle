@@ -6,6 +6,7 @@ public class Fighter : MonoBehaviour
 {
     [SerializeField]
     private CharacterData characterData;
+    public CharacterData CharacterData => characterData;
     [SerializeField]
     private UnityEvent onInitialize;
     private Animator animator;

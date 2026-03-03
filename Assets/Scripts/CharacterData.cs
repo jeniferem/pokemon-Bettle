@@ -6,6 +6,7 @@ public class CharacterData : ScriptableObject
     public string characterName;
     public float maxHealth;
     public AttackData[] attacks;
+    public string WinAnimationName;
 }
 
 [System.Serializable]

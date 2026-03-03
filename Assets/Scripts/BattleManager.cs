@@ -15,7 +15,11 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     private UnityEvent onStartBattleCount;
     [SerializeField]
+    private UnityEvent onStartBattle;
+    [SerializeField]
     private UnityEvent onStopBattle;
+    [SerializeField]
+    private UnityEvent<string> onWinBattle;                        
     private Coroutine battleCoroutine;
     private List<Fighter>fighters = new List<Fighter>();
     public void AddFighter (Fighter fighter)
@@ -43,6 +47,7 @@ public class BattleManager : MonoBehaviour
     }
     public void StartBattle()
     {
+        onStartBattle?.Invoke();
         battleCoroutine = StartCoroutine(BattleCoroutine());
     }
     private IEnumerator BattleCoroutine()
@@ -68,7 +73,21 @@ public class BattleManager : MonoBehaviour
             {
                 RemoveFigthter(defender);
             }
+            else
+            {
+                yield return new WaitForSeconds(1.5f);
+            }
         }
+        if (fighters.Count == 1)
+        {
+           WinBattle(fighters[0]);
+        }
+    }
+    public void WinBattle(Fighter winner)
+    {
+       onWinBattle?.Invoke(winner.CharacterData.characterName);
+       winner.Animator.Play(winner.CharacterData.WinAnimationName);
+       winner.transform.LookAt(Camera.main.transform);
     }
     public void StopBattle()
     {
