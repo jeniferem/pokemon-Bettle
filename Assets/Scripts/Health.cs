@@ -11,13 +11,15 @@ public class Health : MonoBehaviour
     private float _currentHealth;
     public float CurrentHealth => _currentHealth;
     [SerializeField]
-    private UnityEvent _onTakeDamage;
+    private UnityEvent<DamageTarget> _onTakeDamage;
     [SerializeField]
     private UnityEvent _onDie;
+    private DamageTarget damageTarget = new DamageTarget();
     public void TakeDamage(float damage)
     {
         _currentHealth -= damage;
-        _onTakeDamage.Invoke();
+        damageTarget.SetDamageTarget(transform, damage);
+        _onTakeDamage.Invoke(damageTarget);
         if (_currentHealth <= 0)
         {
             Die();
