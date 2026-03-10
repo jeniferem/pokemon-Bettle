@@ -9,7 +9,7 @@ public class BattleManager : MonoBehaviour
 {
     [SerializeField]
 
-    private int minimumFighters = 2;
+    private int minimumFighters = 3;
     [SerializeField]
     private int maximumFighters = 4;
     [SerializeField]
