@@ -6114,7 +6114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ef5136d1dd010147bca09a58db6b343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleManager
-  minimumFighters: 4
+  minimumFighters: 2
   maximumFighters: 4
   onStartBattleCount:
     m_PersistentCalls:

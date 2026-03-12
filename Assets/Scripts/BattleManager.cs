@@ -9,9 +9,9 @@ public class BattleManager : MonoBehaviour
 {
     [SerializeField]
 
-    private int minimumFighters = 4;
+    private int minimumFighters = 2;
     [SerializeField]
-    private int maximumFighters = 5;
+    private int maximumFighters = 4;
     [SerializeField]
     private UnityEvent onStartBattleCount;
     [SerializeField]
