@@ -35,6 +35,7 @@ public class DialogSystem : MonoBehaviour
         dialogText.text = "";
         foreach (char latter in dialog.ToCharArray())
         {
+            SoundManager.instance.Play ("GOLPE");
             dialogText.text += latter;
             yield return new  WaitForSeconds(timeBetweenWords);
         }

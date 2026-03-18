@@ -20,6 +20,7 @@ MonoBehaviour:
     maxDamage: 200
     animationName: Attack
     attackDuration: 2
+    attackSooundName: 'Charizardgroan '
     attackParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
     attackHitParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   - attackName: Atackk2
@@ -27,6 +28,7 @@ MonoBehaviour:
     maxDamage: 300
     animationName: Attack2
     attackDuration: 2
+    attackSooundName: Charizard angry
     attackParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
     attackHitParticles: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
   WinAnimationName: win (1)

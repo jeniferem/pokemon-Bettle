@@ -17,6 +17,7 @@ public class AttackData
     public float maxDamage;
     public string animationName;
     public float attackDuration;
+    public string attackSooundName;
     public GameObject attackParticles;
     public GameObject attackHitParticles;
 }
